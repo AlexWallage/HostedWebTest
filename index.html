@@ -1,65 +1,64 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal Leaflet Test</title>
-
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet/dist/leaflet.css"
-    />
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        h1 {
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        #map {
-            height: 90vh;
-            width: 100%;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hosted Web GIS Demo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div class="page-shell">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Web GIS Demo</p>
+                <h1>Interactive GIS Map Viewer</h1>
+                <p class="hero-copy">
+                    A lightweight GitHub Pages web GIS interface with responsive layout, modern styling, and professional map controls.
+                </p>
+            </div>
+        </header>
 
-<h1>Minimal Leaflet Map (No Data)</h1>
+        <main class="layout">
+            <section class="map-panel">
+                <div id="map"></div>
+            </section>
 
-<div id="map"></div>
+            <aside class="sidebar">
+                <section class="card">
+                    <h2>Project Summary</h2>
+                    <p>
+                        This example demonstrates a polished GIS site with a responsive map panel, layer switcher, floating legend, and curated city marker dataset.
+                    </p>
+                    <ul>
+                        <li>Interactive Leaflet basemap with topographic option</li>
+                        <li>Major UK city markers with popups</li>
+                        <li>Optimized for GitHub Pages and responsive displays</li>
+                    </ul>
+                </section>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                <section class="card card--accent">
+                    <h3>Quick Tips</h3>
+                    <ul>
+                        <li>Use the layer control to toggle basemaps.</li>
+                        <li>Zoom into a city by clicking its marker.</li>
+                        <li>Read the legend for map context and navigation.</li>
+                    </ul>
+                </section>
 
-<script>
-    // Create map
-    const map = L.map('map').setView([51.5074, -0.1278], 5);
+                <section class="card card--footer">
+                    <p>
+                        Built for branch-based development and hosted demos. Use this branch to refine visual design and map usability on GitHub Pages.
+                    </p>
+                </section>
+            </aside>
+        </main>
+    </div>
 
-    // Add basemap
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Add a marker
-    L.marker([51.5074, -0.1278])
-        .addTo(map)
-        .bindPopup('London')
-        .openPopup();
-
-    L.marker([55.9533, -3.1883])
-        .addTo(map)
-        .bindPopup('Edinburgh');
-
-    L.marker([53.4808, -2.2426])
-        .addTo(map)
-        .bindPopup('Manchester');
-</script>
-
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
