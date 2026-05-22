@@ -23,9 +23,3 @@ npm test
 # Start server
 npm start
 ```
-
-## Contributing
-Please follow the project's contribution guidelines when submitting changes.
-
-## License
-See LICENSE file for details.
