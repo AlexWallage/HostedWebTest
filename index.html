@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hosted Web GIS Demo</title>
+    <title>WebGIS Demo</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,16 +13,22 @@
     <div class="page-shell">
         <header class="hero">
             <div>
-                <p class="eyebrow">Web GIS Demo</p>
+                <p class="eyebrow">WebGIS Demo</p>
                 <h1>Interactive GIS Map Viewer</h1>
                 <p class="hero-copy">
-                    A lightweight GitHub Pages web GIS interface with responsive layout, modern styling, and professional map controls.
+                    A lightweight webGIS interface with responsive layout, modern styling and map controls
                 </p>
             </div>
         </header>
 
         <main class="layout">
             <section class="map-panel">
+                <div class="map-panel-topbar">
+                    <div>
+                        <span class="map-badge">Live Demo</span>
+                        <p>UK city markers, layer toggling and interactive popups in a polished Web GIS interface.</p>
+                    </div>
+                </div>
                 <div id="map"></div>
             </section>
 
@@ -30,12 +36,11 @@
                 <section class="card">
                     <h2>Project Summary</h2>
                     <p>
-                        This example demonstrates a polished GIS site with a responsive map panel, layer switcher, floating legend, and curated city marker dataset.
+                        This example demonstrates a polished GIS site with a responsive map panel, layer switcher, floating legend and curated city marker dataset.
                     </p>
                     <ul>
                         <li>Interactive Leaflet basemap with topographic option</li>
                         <li>Major UK city markers with popups</li>
-                        <li>Optimized for GitHub Pages and responsive displays</li>
                     </ul>
                 </section>
 
@@ -48,13 +53,31 @@
                     </ul>
                 </section>
 
-                <section class="card card--footer">
-                    <p>
-                        Built for branch-based development and hosted demos. Use this branch to refine visual design and map usability on GitHub Pages.
-                    </p>
+                <section class="card card--legend">
+                    <h3>City Marker Legend</h3>
+                    <div class="legend-grid">
+                        <div class="legend-item"><span class="legend-swatch legend-london"></span>London — Finance & culture</div>
+                        <div class="legend-item"><span class="legend-swatch legend-edinburgh"></span>Edinburgh — Heritage & tourism</div>
+                        <div class="legend-item"><span class="legend-swatch legend-manchester"></span>Manchester — Tech & industry</div>
+                    </div>
                 </section>
             </aside>
         </main>
+
+        <div class="footer-row">
+            <section class="card card--footer">
+                <p>
+                    Built to develop experience in leaflet.js based Web-GIS development, with a focus on clean design and user-friendly interface. All code is open source and available on GitHub.
+                </p>
+                <p class="disclaimer">
+                    Note: the map content is fictitious and client-side only; there is no backend or live data service powering this demo.
+                </p>
+            </section>
+        </div>
+
+        <footer class="site-footer">
+            <p>© 2026 Hosted WebGIS Demo. Data is fictitious and there is no backend.</p>
+        </footer>
     </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
